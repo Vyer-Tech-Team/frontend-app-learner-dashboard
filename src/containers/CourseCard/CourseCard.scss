@@ -51,6 +51,7 @@
 
   .course-card-banners {
     > .alert {
+      color: #00688D;
       border-radius: 0;
       box-shadow: none;
       padding: map-get($spacers, 3) map-get($spacers, 4);
@@ -58,6 +59,9 @@
       &:last-of-type {
         border-bottom-left-radius: $alert-border-radius;
         border-bottom-right-radius: $alert-border-radius;
+      }
+      .alert-icon {
+        color: #00688D;
       }
     }
 

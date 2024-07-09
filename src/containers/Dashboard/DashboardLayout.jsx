@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -23,11 +24,12 @@ export const columnConfig = {
   },
 };
 
+// eslint-disable-next-line no-unused-vars
 export const DashboardLayout = ({ children, sidebar: Sidebar }) => {
   const {
-    isCollapsed,
+    // isCollapsed,
     sidebarShowing,
-    setSidebarShowing,
+    // setSidebarShowing,
   } = hooks.useDashboardLayoutData();
 
   const courseListColumnProps = sidebarShowing
@@ -35,22 +37,22 @@ export const DashboardLayout = ({ children, sidebar: Sidebar }) => {
     : columnConfig.courseList.noSidebar;
 
   return (
-    <Container fluid size="xl">
+    <div className="container-xl">
       <Row>
         <Col {...courseListColumnProps} className="course-list-column">
           {children}
         </Col>
-        <Col {...columnConfig.sidebar} className="sidebar-column">
+        {/* <Col {...columnConfig.sidebar} className="sidebar-column">
           {!isCollapsed && (<h2 className="course-list-title">&nbsp;</h2>)}
           <Sidebar setSidebarShowing={setSidebarShowing} />
-        </Col>
+        </Col> */}
       </Row>
-      <Row>
+      {/* <Row>
         <Col>
           <WidgetFooter />
         </Col>
-      </Row>
-    </Container>
+      </Row> */}
+    </div>
   );
 };
 DashboardLayout.propTypes = {
