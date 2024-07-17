@@ -1,7 +1,19 @@
 @import "@openedx/paragon/scss/core/core";
 
 .course-card {
+  .course-card-title {
+    color: $primary-700;
+  }
   .card {
+    .btn-primary {
+      background-color: $primary-700;
+      border-color: $primary-700;
+      padding: 10px 20px 10px 20px;
+      font-size: 1.375rem;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: left;
+    }
     .pgn__card-wrapper-image-cap.vertical {
       display: flex;
       min-height: $card-image-vertical-max-height;
@@ -52,6 +64,9 @@
   .course-card-banners {
     > .alert {
       color: #00688D;
+      font-weight: 700;
+      line-height: 24px;
+      font-size: 1.125rem;
       border-radius: 0;
       box-shadow: none;
       padding: map-get($spacers, 3) map-get($spacers, 4);

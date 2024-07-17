@@ -17,7 +17,7 @@ import {
 } from 'data/redux';
 import { reduxHooks } from 'hooks';
 import Dashboard from 'containers/Dashboard';
-import ZendeskFab from 'components/ZendeskFab';
+// import ZendeskFab from 'components/ZendeskFab';
 import { ExperimentProvider } from 'ExperimentContext';
 
 import track from 'tracking';
@@ -26,11 +26,12 @@ import fakeData from 'data/services/lms/fakeData/courses';
 
 import AppWrapper from 'containers/WidgetContainers/AppWrapper';
 // import LearnerDashboardHeader from 'containers/LearnerDashboardHeader';
-import { LearningHeader } from '@edx/frontend-component-header';
+// import { LearningHeader } from '@edx/frontend-component-header';
 
 import { getConfig } from '@edx/frontend-platform';
 import messages from './messages';
 import './App.scss';
+import CustomHeader from './containers/CustomHeader';
 
 export const App = () => {
   const { authenticatedUser } = React.useContext(AppContext);
@@ -97,7 +98,8 @@ export const App = () => {
       <div>
         <AppWrapper>
           {/* <LearnerDashboardHeader /> */}
-          <LearningHeader />
+          {/* <LearningHeader /> */}
+          <CustomHeader />
           <main>
             {hasNetworkFailure
               ? (
@@ -112,7 +114,7 @@ export const App = () => {
           </main>
         </AppWrapper>
         {/* <FooterSlot /> */}
-        <ZendeskFab />
+        {/* <ZendeskFab /> */}
       </div>
     </>
   );

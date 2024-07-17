@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Alert } from '@openedx/paragon';
-import { Info } from '@openedx/paragon/icons';
+import { Warning } from '@openedx/paragon/icons';
 
 export const Banner = ({
   children, variant, icon, className,
@@ -12,7 +12,7 @@ export const Banner = ({
   </Alert>
 );
 Banner.defaultProps = {
-  icon: Info,
+  icon: Warning,
   variant: 'info',
   className: 'mb-0',
 };
